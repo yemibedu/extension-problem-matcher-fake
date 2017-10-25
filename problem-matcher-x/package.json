@@ -1,0 +1,31 @@
+{
+    "name": "problem-matcher-x",
+    "displayName": "Problem Matcher X",
+    "description": "Problem Matcher for X",
+    "version": "0.0.1",
+    "publisher": "yemibedu",
+    "engines": {
+        "vscode": "^1.17.0"
+    },
+    "categories": [
+        "Languages",
+      "Other"
+    ],
+    "contributes": {
+        "problemPatterns": [{
+            "name": "fake",
+            "regexp": "^(.*)$",
+            "file": 1,
+            "location": 2,
+            "message": 3
+        }],
+        "problemMatchers": [{
+            "name": "fake-matcher",
+            "label": "fake matcher",
+            "owner": "fake",
+            "applyTo": "allDocuments",
+            "fileLocation": "absolute",
+            "pattern": "$fake"
+        }]
+    }
+}
